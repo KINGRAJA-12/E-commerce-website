@@ -1,0 +1,10 @@
+import { register,login,logout,getme, refreshToken} from "../controllers/auth.controller.js";
+import express from "express";
+import { protect } from "../middlewars/proteced.middlewars.js";
+let authRoutes=express.Router();
+authRoutes.post("/register",register);
+authRoutes.post('/login',login);
+authRoutes.get("/logout",protect,logout);
+authRoutes.get("/getme",protect,getme);
+authRoutes.get("/refresh-accessToken",refreshToken);
+export default authRoutes;

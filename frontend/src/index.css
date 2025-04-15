@@ -1,0 +1,13 @@
+@import "tailwindcss";
+.scroll::-webkit-scrollbar{
+display: none;
+}
+.scroll-animation::-webkit-scrollbar{
+background-color: #10202A;
+}
+.scroll-animation::-webkit-scrollbar-thumb{
+    background-color: #07524a;
+    width: 20px;
+    height: 100%;
+    border-radius:10px;
+}
